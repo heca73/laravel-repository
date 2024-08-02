@@ -1,0 +1,21 @@
+{
+    "name": "heca73/laravel-repository",
+    "description": "DB Query Based Repository",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Heca73\\LaravelRepository\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "heca73",
+            "email": "hecade.nanami@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "laravel/framework": "^v10.0.0"
+    }
+}
