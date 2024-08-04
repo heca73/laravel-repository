@@ -1,0 +1,50 @@
+<?php
+
+namespace {{ namespace }};
+
+use Heca73\LaravelRepository\Repository;
+
+class {{ class }} extends Repository
+{
+
+    /**
+     * Set default table selects
+     * You should extend this method and add your own rules
+     *
+     * @return string[]
+     */
+    protected function defaultSelects(): array
+    {
+        // Todo: Change this with your own default table selects
+
+        return [$this->getTableName() . '.*'];
+    }
+
+    /**
+     * Perform special action for unique and special parameters
+     * You should extend this method and add your own rules
+     *
+     * @param array $special_parameters
+     * @return static
+     */
+    protected function addSpecialParameters(array $special_parameters = []): static
+    {
+        // Todo: Add your own special rules here
+
+        return $this;
+    }
+
+    /**
+     * Perform table joins
+     * You should extend this method and add your
+     * own join rules
+     *
+     * @return static
+     */
+    protected function addDefaultJoins(): static
+    {
+        // Todo: Add your own table joins here
+
+        return $this;
+    }
+}
