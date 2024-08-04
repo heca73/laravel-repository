@@ -3,6 +3,7 @@
 namespace Heca73\LaravelRepository\Providers;
 
 use Heca73\LaravelRepository\Commands\CreateRepositoryCommand;
+use Heca73\LaravelRepository\Repository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -14,7 +15,9 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        
+        $this->app->bind('heca73-laravel-repository', function ($app) {
+            return new Repository();
+        });
     }
 
     /**
